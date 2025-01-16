@@ -24,6 +24,6 @@ private:
 	std::string	mNickname;
 	std::string mPhoneNumber;
 	std::string mSecret;
-}
+};
 
 #endif //CONTACT_H_
