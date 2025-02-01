@@ -17,4 +17,4 @@ private:
 	std::string	mType;
 };
 
-#endif
+#endif //WEAPON_H_
