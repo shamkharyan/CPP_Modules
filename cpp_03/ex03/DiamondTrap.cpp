@@ -8,20 +8,20 @@ DiamondTrap::DiamondTrap() : ClapTrap("Untitled_clap_name")
 {
 	std::cout << "DiamondTrap default constructor" << std::endl;
 	mName = "Untitled";
-	mMaxHealth = 100;
-	mHealth = 100;
-	mEnergy = 50;
-	mDamage = 30;
+	mMaxHealth = FragTrap::mMaxHealth;
+	mHealth = FragTrap::mHealth;
+	mEnergy = ScavTrap::mEnergy;
+	mDamage = FragTrap::mDamage;
 }
 
 DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name")
 {
 	std::cout << "DiamondTrap string constructor" << std::endl;
 	mName = name;
-	mMaxHealth = 100;
-	mHealth = 100;
-	mEnergy = 50;
-	mDamage = 30;
+	mMaxHealth = FragTrap::mMaxHealth;
+	mHealth = FragTrap::mHealth;
+	mEnergy = ScavTrap::mEnergy;
+	mDamage = FragTrap::mDamage;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& obj) : ClapTrap(obj), ScavTrap(obj), FragTrap(obj)
@@ -46,5 +46,6 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& obj)
 
 void DiamondTrap::whoAmI()
 {
-	std::cout << "I am DiamondTrap " << mName << " and I am inherited from ScavTrap and FragTrap!" << std::endl;
+	std::cout << "DiamondTrap name: " << mName << std::endl;
+	std::cout << "ClapTrap name: " << ClapTrap::mName << std::endl;
 }

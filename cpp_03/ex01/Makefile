@@ -15,7 +15,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME) 
 
-%.o: %.cpp Makefile Fixed.h
+%.o: %.cpp Makefile ClapTrap.h ScavTrap.h
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:

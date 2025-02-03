@@ -10,6 +10,7 @@ int main()
 
 	obj3.attack("James");
 	obj3.takeDamage(10);
+	obj3.beRepaired(5);
 	obj3.highFivesGuys();
 
 	return 0;

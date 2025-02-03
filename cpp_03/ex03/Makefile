@@ -1,4 +1,4 @@
-NAME = fragTrap
+NAME = diamondTrap
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
@@ -7,6 +7,7 @@ SRCS = \
 	main.cpp \
 	ClapTrap.cpp \
 	FragTrap.cpp \
+	ScavTrap.cpp \
 	DiamondTrap.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
@@ -16,7 +17,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME) 
 
-%.o: %.cpp Makefile Fixed.h
+%.o: %.cpp Makefile ClapTrap.h ScavTrap.h FragTrap.h DiamondTrap.h
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:
