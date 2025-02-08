@@ -96,30 +96,28 @@ bool Fixed::operator<=(const Fixed& fixed) const
 	return value <= fixed.value;
 }
 
-Fixed& Fixed::operator+(const Fixed& fixed)
+Fixed Fixed::operator+(const Fixed& fixed) const
 {
-	value += fixed.value;
-	return *this;
+	Fixed result;
+	result.value = value + fixed.value;
+	return result;
 }
 
-Fixed& Fixed::operator-(const Fixed& fixed)
+Fixed Fixed::operator-(const Fixed& fixed) const
 {
-	value -= fixed.value;
-	return *this;
+	Fixed result;
+	result.value = value - fixed.value;
+	return result;
 }
 
-Fixed& Fixed::operator*(const Fixed& fixed)
+Fixed Fixed::operator*(const Fixed& fixed) const
 {
-	Fixed temp(toFloat() * fixed.toFloat());
-	value = temp.value;
-	return *this;
+	return Fixed(toFloat() * fixed.toFloat());
 }
 
-Fixed& Fixed::operator/(const Fixed& fixed)
+Fixed Fixed::operator/(const Fixed& fixed) const
 {
-	Fixed temp(toFloat() / fixed.toFloat());
-	value = temp.value;
-	return *this;
+	return Fixed(toFloat() / fixed.toFloat());
 }
 
 Fixed& Fixed::operator++()
