@@ -96,26 +96,26 @@ bool Fixed::operator<=(const Fixed& fixed) const
 	return value <= fixed.value;
 }
 
-Fixed Fixed::operator+(const Fixed& fixed) const
+const Fixed Fixed::operator+(const Fixed& fixed) const
 {
 	Fixed result;
 	result.value = value + fixed.value;
 	return result;
 }
 
-Fixed Fixed::operator-(const Fixed& fixed) const
+const Fixed Fixed::operator-(const Fixed& fixed) const
 {
 	Fixed result;
 	result.value = value - fixed.value;
 	return result;
 }
 
-Fixed Fixed::operator*(const Fixed& fixed) const
+const Fixed Fixed::operator*(const Fixed& fixed) const
 {
 	return Fixed(toFloat() * fixed.toFloat());
 }
 
-Fixed Fixed::operator/(const Fixed& fixed) const
+const Fixed Fixed::operator/(const Fixed& fixed) const
 {
 	return Fixed(toFloat() / fixed.toFloat());
 }
