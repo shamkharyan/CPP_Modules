@@ -15,7 +15,7 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME) 
+	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 %.o: %.cpp Makefile ClapTrap.h ScavTrap.h FragTrap.h DiamondTrap.h
 	$(CPP) $(CPPFLAGS) -c $< -o $@

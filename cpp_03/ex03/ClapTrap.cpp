@@ -17,7 +17,7 @@ ClapTrap::~ClapTrap()
 	std::cout << "ClapTrap destructor" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& obj) : 
+ClapTrap::ClapTrap(const ClapTrap& obj) :
 mName(obj.mName), mMaxHealth(obj.mMaxHealth), mHealth(obj.mHealth), mEnergy(obj.mEnergy), mDamage(obj.mDamage)
 {
 	std::cout << "ClapTrap copy constructor" << std::endl;
@@ -40,13 +40,13 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (mHealth && mEnergy)
 	{
-		std::cout << "ClapTrap " 
-					<< mName 
-					<< " attacks " 
-					<< target 
+		std::cout << "ClapTrap "
+					<< mName
+					<< " attacks "
+					<< target
 					<< " causing "
 					<< mDamage
-					<< " points of damage!" 
+					<< " points of damage!"
 					<< std::endl;
 		--mEnergy;
 	}

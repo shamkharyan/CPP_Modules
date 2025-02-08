@@ -44,13 +44,13 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (mHealth && mEnergy)
 	{
-		std::cout << "ScavTrap " 
-					<< mName 
-					<< " attacks " 
-					<< target 
+		std::cout << "ScavTrap "
+					<< mName
+					<< " attacks "
+					<< target
 					<< " causing "
 					<< mDamage
-					<< " points of damage!" 
+					<< " points of damage!"
 					<< std::endl;
 		--mEnergy;
 	}
