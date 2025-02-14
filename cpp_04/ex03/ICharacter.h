@@ -1,6 +1,10 @@
 #ifndef ICHARACTER_H_
 #define ICHARACTER_H_
 
+#include <string>
+
+class AMateria;
+
 class ICharacter
 {
 public:
