@@ -15,9 +15,9 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME) 
+	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp Makefile Animal.h Dog.h Cat.h
+%.o: %.cpp Makefile Animal.h Dog.h Cat.h Brain.h
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:

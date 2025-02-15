@@ -6,6 +6,7 @@
 
 int main()
 {
+	std::cout << "** Animal array test **" << std::endl;
     Animal *animals[10];
 
     for (unsigned i = 0; i < 10; ++i)
@@ -16,9 +17,19 @@ int main()
             animals[i] = new Cat();
         animals[i]->makeSound();
     }
-
     for (unsigned i = 0; i < 10; ++i)
         delete animals[i];
+	std::cout << std::endl;
+
+	std::cout << "** Brain default constructor test **" << std::endl;
+	Brain* b = new Brain();
+	std::cout << std::endl;
+
+	std::cout << "** Brain addIdea method test **" << std::endl;
+	b->addIdea("Some Idea");
+	for (int i = 0; i < 99; ++i)
+		b->addIdea("Another Idea");
+
 
     Dog *dog1 = new Dog();
     Brain* brain1 = dog1->getBrain();
@@ -55,6 +66,6 @@ int main()
     Animal *a = new Animal();
     a->makeSound();
     delete a;
-    
+
     return (0);
 }

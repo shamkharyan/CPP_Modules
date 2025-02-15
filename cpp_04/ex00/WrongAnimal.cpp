@@ -40,4 +40,3 @@ std::string WrongAnimal::getType() const
 {
     return mType;
 }
-
