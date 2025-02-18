@@ -75,7 +75,7 @@ int main()
 	Dog* d3 = new Dog(*d1);
 	std::cout << d3->getType() << '\n' << std::endl;
 
-	std::cout << "** Testing Dpg copy assignment operator **" << std::endl;
+	std::cout << "** Testing Dog copy assignment operator **" << std::endl;
 	*d3 = *d2;
 	*d3 = *d3;
 	std::cout << d3->getType() << '\n' << std::endl;
@@ -168,7 +168,7 @@ int main()
 	std::cout << "** Testing WrongDog copy assignment operator **" << std::endl;
 	*wd3 = *wd2;
 	*wd3 = *wd3;
-	std::cout << d3->getType() << '\n' << std::endl;
+	std::cout << wd3->getType() << '\n' << std::endl;
 
 	std::cout << "** Testing WrongDog makeSound method **" << std::endl;
 	wd3->makeSound();
