@@ -1,21 +1,19 @@
-NAME = diamondTrap
+NAME = bureaucrat
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRCS = \
+	Bureaucrat.cpp \
+	Form.cpp \
 	main.cpp \
-	ClapTrap.cpp \
-	FragTrap.cpp \
-	ScavTrap.cpp \
-	DiamondTrap.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME) 
 
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@

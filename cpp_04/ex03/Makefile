@@ -18,7 +18,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME) 
 
-%.o: %.cpp Makefile AMateria.h Character.h Cure.h Ice.h ICharacter.h IMateriaSource.h MateriaSource.h
+%.o: %.cpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:
