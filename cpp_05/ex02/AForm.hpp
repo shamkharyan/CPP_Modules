@@ -16,7 +16,7 @@ private:
 	bool mIsSigned;
 	AForm();
 protected:
-	void checkExecute(const Bureaucrat& executor);
+	void checkExecute(const Bureaucrat& executor) const;
 public:
 	virtual ~AForm();
 	AForm(const std::string& name, std::size_t signGrade, std::size_t executeGrade);

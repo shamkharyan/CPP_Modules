@@ -5,7 +5,10 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRCS = \
 	Bureaucrat.cpp \
-	Form.cpp \
+	AForm.cpp \
+	ShrubberyCreationForm.cpp \
+	RobotomyRequestForm.cpp \
+	PresidentalPardonForm.cpp \
 	main.cpp \
 
 OBJS = $(SRCS:.cpp=.o)

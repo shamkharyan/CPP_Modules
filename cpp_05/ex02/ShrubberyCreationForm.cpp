@@ -31,6 +31,11 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
     return (*this);
 }
 
+const std::string& ShrubberyCreationForm::getTarget() const
+{
+    return mTarget;
+}
+
 void ShrubberyCreationForm::execute(const Bureaucrat& executor) const
 {
     std::fstream file;
@@ -38,7 +43,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat& executor) const
 
     checkExecute(executor);
     name = mTarget + "_shrubbery";
-    file.open(name, std::ios::out);
+    file.open(name.c_str(), std::ios::out);
     if (!file.is_open())
         throw std::runtime_error("Can't open file");
     

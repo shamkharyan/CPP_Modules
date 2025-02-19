@@ -103,7 +103,7 @@ const char *AForm::FormNotSignedException::what() const throw()
 	return "Bureaucrat can't execute this form, form is not signed";
 }
 
-void AForm::checkExecute(const Bureaucrat& executor)
+void AForm::checkExecute(const Bureaucrat& executor) const
 {
 	if (!mIsSigned)
 		throw AForm::FormNotSignedException();

@@ -3,83 +3,98 @@
 
 int main()
 {
-	std::cout << "** Bureaucrat default constructor test **" << std::endl;
-	Bureaucrat b1;
-	std::cout << b1.getName() << std::endl;
-	std::cout << b1.getGrade() << std::endl;
-	std::cout << std::endl;
-
-	std::cout << "** Bureaucrat parameter constructor test **" << std::endl;
-	Bureaucrat b2("John", 42);
-	std::cout << b2.getName() << std::endl;
-	std::cout << b2.getGrade() << std::endl;
-	try
 	{
-		Bureaucrat b22("Doe", 0);
-	}
-	catch (const Bureaucrat::GradeTooHighException& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	try
-	{
-		Bureaucrat b33("Doe", 200);
-	}
-	catch (const Bureaucrat::GradeTooLowException& e)
-	{
-		std::cout << e.what() << std::endl;
+		std::cout << "** Bureaucrat default constructor test **" << std::endl;
+		Bureaucrat b;
+		std::cout << b.getName() << std::endl;
+		std::cout << b.getGrade() << std::endl;
 	}
 	std::cout << std::endl;
 
-	std::cout << "** Bureaucrat copy constructor test **" << std::endl;
-	Bureaucrat b3 = b2;
-	std::cout << b3.getName() << std::endl;
-	std::cout << b3.getGrade() << std::endl;
-	std::cout << std::endl;
-
-	std::cout << "** Bureaucrat copy assignment operator test **" << std::endl;
-	b3 = b1;
-	b1 = b1;
-	std::cout << b3.getName() << std::endl;
-	std::cout << b3.getGrade() << std::endl;
-	std::cout << std::endl;
-
-	std::cout << "** Bureaucrat incrementGrade method test **" << std::endl;
-	try
 	{
-		Bureaucrat b4("Test", 2);
-		b4.incrementGrade();
-		std::cout << b4.getGrade() << std::endl;
-		b4.incrementGrade();
-	}
-	catch (const Bureaucrat::GradeTooHighException& e)
-	{
-		std::cout << e.what() << std::endl;
+		std::cout << "** Bureaucrat parameter constructor test **" << std::endl;
+		Bureaucrat b("John", 42);
+		std::cout << b.getName() << std::endl;
+		std::cout << b.getGrade() << std::endl;
+		try
+		{
+			Bureaucrat b1("Doe", 0);
+		}
+		catch (const Bureaucrat::GradeTooHighException& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+		try
+		{
+			Bureaucrat b2("Doe", 200);
+		}
+		catch (const Bureaucrat::GradeTooLowException& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
 	}
 	std::cout << std::endl;
 
-	std::cout << "** Bureaucrat decrementGrade method test **" << std::endl;
-	try
 	{
-		Bureaucrat b5("Test", 149);
-		b5.decrementGrade();
-		std::cout << b5.getGrade() << std::endl;
-		b5.decrementGrade();
-	}
-	catch (const Bureaucrat::GradeTooLowException& e)
-	{
-		std::cout << e.what() << std::endl;
+		std::cout << "** Bureaucrat copy constructor test **" << std::endl;
+		Bureaucrat b1;
+		Bureaucrat b2 = b1;
+		std::cout << b1.getName() << std::endl;
+		std::cout << b1.getGrade() << std::endl;
 	}
 	std::cout << std::endl;
 
-	std::cout << "** Bureaucrat operator<< test **" << std::endl;
-	const Bureaucrat b6;
-	Bureaucrat b7("Foo", 21);
-	std::cout << b6 << std::endl;
-	std::cout << b7 << std::endl;
+	{
+		std::cout << "** Bureaucrat copy assignment operator test **" << std::endl;
+		Bureaucrat b1("Test", 100);
+		Bureaucrat b2;
+		b2 = b1;
+		b2 = b2;
+		std::cout << b2.getName() << std::endl;
+		std::cout << b2.getGrade() << std::endl;
+	}
 	std::cout << std::endl;
 
-	std::cout << "** Bureaucrat destructor **" << std::endl;
+	{
+		std::cout << "** Bureaucrat incrementGrade method test **" << std::endl;
+		try
+		{
+			Bureaucrat b("Test", 2);
+			b.incrementGrade();
+			std::cout << b.getGrade() << std::endl;
+			b.incrementGrade();
+		}
+		catch (const Bureaucrat::GradeTooHighException& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+	}
+	std::cout << std::endl;
+
+	{
+		std::cout << "** Bureaucrat decrementGrade method test **" << std::endl;
+		try
+		{
+			Bureaucrat b("Test", 149);
+			b.decrementGrade();
+			std::cout << b.getGrade() << std::endl;
+			b.decrementGrade();
+		}
+		catch (const Bureaucrat::GradeTooLowException& e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+	}
+	std::cout << std::endl;
+
+	{
+		std::cout << "** Bureaucrat operator<< test **" << std::endl;
+		const Bureaucrat b1;
+		Bureaucrat b2("Foo", 21);
+		std::cout << b1 << std::endl;
+		std::cout << b2 << std::endl;
+	}
+	std::cout << std::endl;
 
 	return 0;
 }
