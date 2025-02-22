@@ -94,3 +94,4 @@ void Character::use(int idx, ICharacter& target)
 	else
 		std::cout << "Wrong index." << std::endl;
 }
+

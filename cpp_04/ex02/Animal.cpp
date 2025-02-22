@@ -35,4 +35,3 @@ std::string Animal::getType() const
 {
     return mType;
 }
-

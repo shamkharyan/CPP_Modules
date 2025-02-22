@@ -17,7 +17,7 @@ int main()
 	}
 	std::cout << std::endl;
 
-	{	
+	{
 		std::cout << "** Cure copy constructor test **" << std::endl;
 		Cure *c1 = new Cure();
 		Cure *c2 = new Cure(*c1);
@@ -69,7 +69,7 @@ int main()
 	}
 	std::cout << std::endl;
 
-	{	
+	{
 		std::cout << "** Ice copy constructor test **" << std::endl;
 		Ice *c1 = new Ice();
 		Ice *c2 = new Ice(*c1);

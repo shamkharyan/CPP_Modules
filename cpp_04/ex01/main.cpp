@@ -72,7 +72,7 @@ int main()
     std::cout << "** Brain destructor test **" << std::endl;
     delete b_copy;
     std::cout << std::endl;
-    
+
     std::cout << "** Dog getBrain method and default constructor test **" << std::endl;
     Dog *dog1 = new Dog();
     Brain* brain1 = dog1->getBrain();
