@@ -8,7 +8,7 @@ class ScalarConverter
 private:
 	ScalarConverter();
 	ScalarConverter(const ScalarConverter& other);
-	ScalarConverter& operator=(ScalarConverter& other);
+	ScalarConverter& operator=(const ScalarConverter& other);
 	~ScalarConverter();
 	static bool isChar(const std::string& value);
 	static bool isInt(const std::string& value);
@@ -18,6 +18,7 @@ private:
 	static void convertInt(const std::string& value);
 	static void convertFloat(const std::string& value);
 	static void convertDouble(const std::string& value);
+	static void convertSpecial(const std::string& value);
 
 public:
 	static void convert(const std::string& value);

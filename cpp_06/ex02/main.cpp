@@ -28,5 +28,6 @@ int main()
 
 	for (int i = 0; i < 5; ++i)
 		delete ptr[i];
-
+	
+	return (0);
 }
