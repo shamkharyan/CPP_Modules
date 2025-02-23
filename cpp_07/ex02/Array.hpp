@@ -11,6 +11,7 @@ public:
 	Array(const Array& other);
 	Array& operator=(const Array& other);
 	T& operator[](unsigned i);
+	const T& operator[](unsigned i) const;
 	unsigned size() const;
 private:
 	T* mData;

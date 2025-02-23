@@ -21,7 +21,7 @@ Form::Form(const std::string& name, std::size_t signGrade, std::size_t executeGr
 		throw GradeTooLowException("ExecuteGrade is to Low");
 }
 
-Form::Form(const Form& other) : 
+Form::Form(const Form& other) :
 	mName(other.mName), mSignGrade(other.mSignGrade), mExecuteGrade(other.mExecuteGrade), mIsSigned(other.mIsSigned)
 {
 	std::cout << "Form copy constructor" << std::endl;
@@ -104,5 +104,5 @@ std::ostream& operator<<(std::ostream& o, const Form& obj)
 	o << "SignGrade: " << obj.getSignGrade() << std::endl;
 	o << "ExecuteGrade: " << obj.getExecuteGrade() << std::endl;
 	o << "isSigned: " << obj.getIsSigned() << std::endl;
-	return o; 
+	return o;
 }

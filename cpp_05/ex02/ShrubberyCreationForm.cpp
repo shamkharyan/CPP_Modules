@@ -46,7 +46,7 @@ void ShrubberyCreationForm::execute(const Bureaucrat& executor) const
     file.open(name.c_str(), std::ios::out);
     if (!file.is_open())
         throw std::runtime_error("Can't open file");
-    
+
     file << "      # #### ####               " << std::endl;
     file << "     ### \\/#|### |/####        " << std::endl;
     file << "    ##\\/#/ \\||/##/_/##/_#     " << std::endl;
@@ -63,5 +63,3 @@ void ShrubberyCreationForm::execute(const Bureaucrat& executor) const
     file << "            {                   " << std::endl;
 	file.close();
 }
-
-

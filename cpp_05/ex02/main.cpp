@@ -36,7 +36,7 @@ int main()
 		{
 			std::cout << e.what() << std::endl;
 		}
-		
+
 	}
 	std::cout << std::endl;
 
@@ -46,7 +46,7 @@ int main()
 		Bureaucrat b2 = b1;
 		std::cout << b2.getName() << std::endl;
 		std::cout << b2.getGrade() << std::endl;
-		
+
 	}
 	std::cout << std::endl;
 

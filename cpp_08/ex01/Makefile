@@ -1,12 +1,11 @@
-NAME = bureaucrat
+NAME = span
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
 
 SRCS = \
-	Bureaucrat.cpp \
-	Form.cpp \
 	main.cpp \
+	Span.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

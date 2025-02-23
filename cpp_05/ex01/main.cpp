@@ -34,7 +34,7 @@ int main()
 		{
 			std::cout << e.what() << std::endl;
 		}
-		
+
 	}
 	std::cout << std::endl;
 
@@ -87,7 +87,7 @@ int main()
 		{
 			std::cout << e.what() << std::endl;
 		}
-		
+
 	}
 	std::cout << std::endl;
 
@@ -97,7 +97,7 @@ int main()
 		Bureaucrat b2("Foo", 21);
 		std::cout << b1 << std::endl;
 		std::cout << b2 << std::endl;
-		
+
 	}
 	std::cout << std::endl;
 
@@ -118,7 +118,7 @@ int main()
 		std::cout << f.getSignGrade() << std::endl;
 		std::cout << f.getExecuteGrade() << std::endl;
 		std::cout << f.getIsSigned() << std::endl;
-		
+
 	}
 	std::cout << std::endl;
 
@@ -172,7 +172,7 @@ int main()
 		std::cout << f2.getSignGrade() << std::endl;
 		std::cout << f2.getExecuteGrade() << std::endl;
 		std::cout << f2.getIsSigned() << std::endl;
-		
+
 	}
 	std::cout << std::endl;
 

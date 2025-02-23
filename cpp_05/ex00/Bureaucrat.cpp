@@ -74,4 +74,3 @@ std::ostream& operator<<(std::ostream& o, const Bureaucrat& obj)
 	o << obj.getName() << ", bureaucrat grade " << obj.getGrade();
 	return (o);
 }
-

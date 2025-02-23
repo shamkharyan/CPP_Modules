@@ -112,6 +112,8 @@ int main()
 		{
 			std::cout << e.what() << std::endl;
 		}
+		const Array<int> ca(5);
+		std::cout << ca[0] << std::endl;
 	}
 	return 0;
 }
