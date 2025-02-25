@@ -30,51 +30,51 @@ MutantStack<T>& MutantStack<T>::operator=(const MutantStack& other)
 }
 
 template <typename T>
-typename MutantStack<T>::Iterator MutantStack<T>::begin()
+typename MutantStack<T>::iterator MutantStack<T>::begin()
 {
-    return c.begin();
+    return std::stack<T>::c.begin();
 }
 
 template <typename T>
-typename MutantStack<T>::Iterator MutantStack<T>::end()
+typename MutantStack<T>::iterator MutantStack<T>::end()
 {
-    return c.end();
+    return std::stack<T>::c.end();
 }
 
 template <typename T>
-typename MutantStack<T>::CIterator MutantStack<T>::begin() const
+typename MutantStack<T>::const_iterator MutantStack<T>::begin() const
 {
-    return c.begin();
+    return std::stack<T>::c.begin();
 }
 
 template <typename T>
-typename MutantStack<T>::CIterator MutantStack<T>::end() const
+typename MutantStack<T>::const_iterator MutantStack<T>::end() const
 {
-    return c.end();
+    return std::stack<T>::c.end();
 }
 
 template <typename T>
-typename MutantStack<T>::RIterator MutantStack<T>::rbegin()
+typename MutantStack<T>::reverse_iterator MutantStack<T>::rbegin()
 {
-    return c.rbegin();
+    return std::stack<T>::c.rbegin();
 }
 
 template <typename T>
-typename MutantStack<T>::RIterator MutantStack<T>::rend()
+typename MutantStack<T>::reverse_iterator MutantStack<T>::rend()
 {
-    return c.rend();
+    return std::stack<T>::c.rend();
 }
 
 template <typename T>
-typename MutantStack<T>::CRIterator MutantStack<T>::rbegin() const
+typename MutantStack<T>::const_reverse_iterator MutantStack<T>::rbegin() const
 {
-    return c.rbegin();
+    return std::stack<T>::c.rbegin();
 }
 
 template <typename T>
-typename MutantStack<T>::CRIterator MutantStack<T>::rend() const
+typename MutantStack<T>::const_reverse_iterator MutantStack<T>::rend() const
 {
-    return c.rend();
+    return std::stack<T>::c.rend();
 }
 
 
