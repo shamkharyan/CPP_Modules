@@ -14,7 +14,7 @@ public:
 	Span(const Span& other);
 	Span& operator=(const Span& other);
 	void addNumber(unsigned n);
-	void fill();
+	void fill(std::size_t seed);
 	unsigned shortestSpan() const;
 	unsigned longestSpan() const;
 	unsigned getSize() const;

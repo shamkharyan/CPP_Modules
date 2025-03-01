@@ -76,7 +76,3 @@ typename MutantStack<T>::const_reverse_iterator MutantStack<T>::rend() const
 {
     return std::stack<T>::c.rend();
 }
-
-
-
-

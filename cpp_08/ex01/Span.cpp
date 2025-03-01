@@ -1,7 +1,6 @@
 #include "Span.hpp"
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
 #include <algorithm>
 #include <limits>
 
@@ -42,9 +41,9 @@ void Span::addNumber(unsigned n)
 	mStorage.push_back(n);
 }
 
-void Span::fill()
+void Span::fill(std::size_t seed)
 {
-	std::srand(std::time(NULL));
+	std::srand(seed);
 
 	unsigned sz = mStorage.size();
 	unsigned cap = mStorage.capacity();
@@ -103,5 +102,3 @@ const char *Span::StorageOverflowException::what() const throw()
 unsigned Span::getSize() const { return mStorage.size(); }
 
 unsigned Span::getCapacity() const { return mStorage.capacity(); }
-
-
