@@ -50,6 +50,7 @@
         "streambuf": "cpp",
         "typeinfo": "cpp",
         "list": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "map": "cpp"
     }
 }
